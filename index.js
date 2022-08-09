@@ -27,9 +27,9 @@ app.get('/', function(req, res){
 //guardar contacto
 app.post('/contacts', (req, res) => {
     const contact = {
-        nombre: req.contact.nombre,
-        apellido: req.contact.apellido,
-        telefono: req.contact.telefono
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        telefono: req.body.telefono
     }
 
     contacts.push(contact)
